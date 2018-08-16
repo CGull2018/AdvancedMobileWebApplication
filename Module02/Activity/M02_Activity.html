@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Module02_Activity</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+ <style>
+ .Header{
+   text-align: center;
+ }
+ </style>
+ <style>
+ .Grid{
+  border: 2px solid orange;
+ }
+ </style>
+
+<!--Module02_Activity Header--->
+<div class="container">
+  <div class="Header">
+    <div class="col-lg-12 col-sm-6">
+
+      <h1>Module 02 Acivity</h1>
+      <p>Implementing a 3-column grid</p>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="row">
+    <div class="Grid col-lg-4 col-sm-4">
+      <h1>Grid Column 1</h1>
+      <p>In column <b>1<b> there is <i>formated<i> <mark> TEXT! <mark></p>
+    </div>
+    <div class="Grid col-lg-4 col-sm-4">
+      <h1>Grid Column 2</h1>
+      <form>
+        <div class="col-lg-6 col-sm-6">
+          <p>Change Background color within this form</p>
+          <button type="button" onclick="setBackground()" class="btn btn-warning">Set background </button>
+
+        </div>
+        <div class="col-lg-6 col-sm-6">
+          <p>Reset Background color within this form</p>
+          <button type="button" onclick="resetBackground()" class="btn btn-success">Reset background </button>
+        </div>
+      </form>
+    </div>
+    <div class="Grid col-lg-4 col-sm-4">
+      <h1>Grid Column 3</h1>
+      <div class="col-lg-6 col-sm-6" >
+        <img src="M01Logo.png" class="img-responsive">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="Header">
+    <div class="Grid col-lg-12 col-sm-6">
+      <h1>Created By Cody Gullickson</h1>
+      <h2>Advanced Mobile Web Application Development</h2>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  function setBackground() {
+    document.body.style.backgroundColor = "lightblue";
+          }
+</script>
+<script>
+  function resetBackground() {
+    document.body.style.backgroundColor = "white";
+}
+</script>
+</body>
+</html>
