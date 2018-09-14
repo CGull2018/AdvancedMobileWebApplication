@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Module 06 Notification</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="Style.css">
+
+  </head>
+  <body>
+
+    <!--Header/Banner -->
+    <div class="container">
+      <div class="row">
+        <div class="Header-logo col-lg-4 col-sm-4">
+          <img src="M01Logo.png" class="img-responsive">
+        </div>
+        <div class="jumbotron col-lg-8 col-sm-4">
+          <h1>Pantry Inventory Solutions</h1>
+          <h2>Application Website</h2>
+        </div>
+      </div>
+    </div>
+
+<!--Navigation Bar-->
+
+<nav class="navbar navbar-default">
+  <div class="container">
+    <div class="navbar-header col-lg-4 col-sm-4">
+      <a class="navbar-brand" href="#"></a>
+    </div>
+    <ul class="nav nav-pills">
+      <li><a href="WireframeActivity.html">Home</a></li>
+      <li><a href="NewUsers.html">New Users</a></li>
+      <li><a href="Messages.html">Messages</a></li>
+      <li><a href="Purchases.html">Purchase</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!--Body of Site line 2-->
+<div class="container">
+  <div class="row">
+    <!--Grid square 1-->
+    <div class="Grid col-lg-4 col-sm-4">
+      <div class="panel panel">
+        <p>With the help of a form class, user inputs can be entered to create a user account.
+        Key information that will be used to create each user account includes,</p>
+<ul>
+        <li>First Name:</li>
+                <li>Last Name:</li>
+                        <li>User Name:</li>
+                                <li>Password:</li>
+                                        <li>User Email:</li>
+</ul>
+<p>A User ID will be automatically created and auto increasing to give each user a unique serial number.</p>
+
+<p>This page will incorperate a notification as the user is created, used to confirm a new user.</p>
+
+<p>If the user has not accepted the Terms of Service Aggrement, a javascript Alert Box will pop up. This forces the user to
+read the error they created since the notification API is set to auto close after 10 seconds.</p>
+
+
+      </div>
+    </div>
+    <!--Grid square 2-->
+
+    <div class="card col-lg-8 col-sm-8">
+      <div class="card-header">
+ <span class="label label-primary">User Profile</span>
+</div>
+      <div class="card-body">
+<div class="card-header">
+<p><br></p>
+</div>
+        <form action="#" method="POST">
+                  <div class="form-inline">
+                    <label>First Name:</label>
+                    <input type="text" class="form-control" name="FirstName" required>
+
+                  <label>Last Name:</label>
+                  <input type="text" class="form-control" name="LastName">
+                </div>
+
+                 <div class="form-inline">
+                   <label>User Name:</label>
+                   <input type="text" class="form-control" name="UserName" required>
+                   <label>Password:</label>
+                   <input type="password" class="form-control" name="Password" required>
+                 </div>
+
+                 <div class="form-group">
+                   <label class="form-label">User Bio: </label>
+                  <textarea class="form-control" rows="5" id="message"></textarea>
+                 </div>
+
+                 <div class="form-group">
+                   <label><u>Gender</u></label>
+                       <input type="radio" class="control-input" id="Male"></input>
+                       <label for="Male">Male</label>
+
+                       <input type="radio" class="control-input" id="Female"></input>
+                       <label for="Female">Female</label>
+                       <input type="radio" class="control-input" id="NA"></input>
+                       <label for="NA"> Perfer not to Answer</label>
+
+
+                 </div>
+
+                 <div class="form-group">
+                   <label><u>Age Range</u></label>
+                   <select class="custom-select-md">
+                  <option selected>Age Range</option>
+                  <option value="13-18">13 to 18</option>
+                  <option value="19-25">19 to 25</option>
+                  <option value="26-35">26 to 35</option>
+                  <option value="36-45">36 to 45</option>
+                  <option value="45+">46 or older</option>
+
+                </select>
+                 </div>
+
+                <div class="form-group" style="overflow-y: scroll; height: 100px">
+                  <label><u>Terms of Service</u></label>
+                  <p>Please read the following terms and service agreement. This list outlines
+                    all of the agreements that are subject to change with the use of this website
+                    as well as the Pantry Inventory Solutions application.</p>
+                    <ul>
+                      <li>All Areas must be filled out completly with the exception of the User Bio.</li>
+                      <li>User information is subject to security threats at this point of the Project
+                      <u>PLEASE USE CAUTION!</u></li>
+                      <li>By creating this count, the ID associated with this login can be linked to the ID
+                      Associated with the Pantry Inventory Solution applicaiton.</li>
+                    </ul>
+                </div>
+                <label>Accept Terms of Service</label>
+                    <input type="checkbox" class="custom-control-input" id="TermsCheck"></input>
+                    <div class="submit">
+                                      <button type=" submit" class="btn btn-primary" onclick="trigger_notification();"> Create User</button>
+                    </div>
+
+               </form>
+
+      </div>
+
+      <div class="card-Footer">
+        <p>By creating a user, a unique account can be created for users to link to their applicaiton database.</p>
+            </div>
+    </div>
+</div>
+
+<!--Footer-->
+<div class="container-fluid">
+  <div class="row">
+  <div class="panel panel-info col-lg-8 col-sm-8">
+  <div class="panel-footer"> New Users Page (Module 06 Course Project) </br>
+                             Cody Gullickson</br>
+                             Visioned to be a host website for the Pantry Inventory Application that is being created
+                             in the Capstone Course.
+                             <a href="http://capstone.centralus.cloudapp.azure.com/PantryInventoryWeb/Login.php "role="button" class="btn btn-primary">Capstone Project</a>
+</div>
+
+</div>
+  <div class="panel panel-info col-lg-1 col-sm-1">
+    <a href="#">
+      <span class="glyphicon glyphicon-search"></span>
+    </a>
+  </div>
+  <div class="panel panel-info col-lg-1 col-sm-1">
+    <a href="#">
+      <span class="glyphicon glyphicon-briefcase"></span>
+    </a>
+  </div>
+  <div class="panel panel-info col-lg-1 col-sm-1">
+    <a href="#">
+      <span class="glyphicon glyphicon-cloud"></span>
+    </a>
+
+</div>
+  </div>
+</div>
+
+
+<script type="text/javascript">
+
+    function trigger_notification()
+    {
+      var x = document.getElementById("TermsCheck").checked;
+
+        //check if browser supports notification API
+        if("Notification" in window)
+        {
+            if(Notification.permission == "granted")
+            {
+              if (x == true) {
+                var notification = new Notification("New User Notification", {"body":"New User Successfully Created", "icon":"M01Logo.png"});
+
+              }
+              else {
+                    alert("Please Accept Terms of Service Aggrement");
+              }
+            }
+            else
+            {
+                Notification.requestPermission(function (permission) {
+                    if (permission === "granted")
+                    {
+                        var notification = new Notification(
+                          "New User Notification", {"body":"Please Grant permission for this Notification", "icon":"M01Logo.png"});
+                    }
+                });
+            }
+        }                else
+                {
+                    alert("Your browser doesn't support notfication API");
+                }   
+    }
+</script>
+
+  </body>
+</html>
